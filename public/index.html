@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Broker Client Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">BrokerDash</div>
+    <nav class="nav">
+      <a href="#" class="nav-link active" data-target="dashboard">Dashboard</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <div id="user-badge" class="user-badge">Guest</div>
+      <button id="logout-btn" class="hidden">Logout</button>
+    </div>
+  </header>
+  <main class="container">
+    <div id="toast" class="toast hidden"></div>
+
+    <section id="multi" class="card">
+      <h2>Sessions</h2>
+      <div style="margin-bottom:12px;">
+        <button id="add-user">Add User</button>
+      </div>
+      <div id="sessions"></div>
+    </section>
+
+    <section id="overview" class="card">
+      <h2>Subscribers Overview</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Subscribers</th>
+          </tr>
+        </thead>
+        <tbody id="overview-body"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">© BrokerDash</footer>
+
+  <script src="/client.js"></script>
+</body>
+</html>
